@@ -1,0 +1,23 @@
+{
+  "name": "single-price-grid-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nazaf64/single-price-grid-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nazaf64/single-price-grid-component/issues"
+  },
+  "homepage": "https://github.com/Nazaf64/single-price-grid-component",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
