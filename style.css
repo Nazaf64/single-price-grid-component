@@ -1,14 +1,12 @@
 :root{
     --cyan: hsl(179, 62%, 43%);
-    --light-cyan: hsl(178, 48%, 48%);
+    --light-cyan: hsl(178, 48%, 50%);
     --bright-yellow: hsl(71, 73%, 54%);
     --light-grey: hsl(204, 43%, 93%);
+    --lighter-grey: rgb(218, 218, 218);
     --grayish-blue: hsl(218, 22%, 67%);
-
     --border-radius: 5px;
 }
-
-
 
 *{
     margin: 0;
@@ -23,7 +21,6 @@ body{
     display: grid;
     justify-content: center;
     align-content: center;
-
     background-color: var(--light-grey);
 }
 
@@ -33,12 +30,15 @@ body{
 
     max-width: 50em;
 
-    box-shadow: 0px 0px 36px 4px rgba(0,0,0,0.31);
-    -webkit-box-shadow: 0px 0px 36px 4px rgba(0,0,0,0.31);
-    -moz-box-shadow: 0px 0px 36px 4px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.14);
 
     border-radius: var(--border-radius);
+}
 
+#main-description, #subscription, #why-us{
+    padding: 2.5em;
 }
 
 #main-description{
@@ -53,16 +53,21 @@ body{
 #main-description h1{
     font-size: 1.5em;
     color: var(--cyan);
+    margin-bottom: 1em;
 }
 
 #main-description h2{
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--bright-yellow);
+
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #main-description p{
     font-size: 1em;
     color: var(--grayish-blue);
+    line-height: 1.7em;
 }
 
 #subscription{
@@ -73,7 +78,44 @@ body{
     grid-row: 2;
 
     border-bottom-left-radius: var(--border-radius);
+}
 
+h3{
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#subscription-fee{
+    font-weight: 200;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#subscription-fee strong{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+#subscription button{
+    color: white;
+    font-weight: bold;
+    padding: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: var(--border-radius);
+
+    margin-top: 2em;
+
+    box-shadow: 0px 0px 36px -3px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0px 0px 36px -3px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0px 0px 36px -3px rgba(0,0,0,0.22);
+
+    cursor: pointer;
 }
 
 #why-us{
@@ -84,13 +126,38 @@ body{
     grid-row: 2;
 
     border-bottom-right-radius: var(--border-radius);
-
 }
 
+#why-us ul{
+    list-style: none;
+    font-weight: 200;
+    font-size: 0.8em;
+    line-height: 1.7em;
+}
 
+@media screen and (max-width: 650px){
+    #card-wrapper{
+        grid-template-columns: 1fr;
+        width: 85%;
+        margin: 0 auto;
+    }
 
+    #main-description{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
 
+    #subscription{
+        grid-column: 1/2;
+        grid-row: 2;
 
-/* @media screen and (max-width: 1000px){
+        border-radius: 0;
+    }
 
-} */
+    #why-us{
+        grid-column: 1/2;
+        grid-row: 3;
+
+        border-bottom-left-radius: var(--border-radius);
+    }
+}
